@@ -1,13 +1,14 @@
 import express from 'express'
 
+import { routes } from './routes';
+
 const app = express();
 
-app.post('/feedbacks', (req, res) => {
-  console.log(req.body);
+app.use(express.json());
 
-  return res.send('hello world');
-})
+app.use(routes)
+
 
 app.listen(3333, () => {
   console.log('HTTP server running!');
-})
+});
