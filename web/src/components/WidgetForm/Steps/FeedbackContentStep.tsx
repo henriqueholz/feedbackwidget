@@ -21,7 +21,7 @@ export function FeedbackContentStep({
 }: FeedbackContentStepProps){
 
     const [screenshot, setScreenshot] = useState<string | null>(null);
-    const [comment, setComment] = useState("");
+    const [comment, setComment] = useState('');
     const [isSendingFeedback, setIsSendingFeedback] = useState(false);
 
     const feedbackTypeInfo = feedbackTypes[feedbackType];
